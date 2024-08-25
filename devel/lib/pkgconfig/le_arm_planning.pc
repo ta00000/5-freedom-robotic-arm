@@ -1,0 +1,8 @@
+prefix=/home/tbs/le_arm/devel
+
+Name: le_arm_planning
+Description: Description of le_arm_planning
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,41 @@
+<launch>
+    <!-- 不使用仿真时间 -->
+    <param name="/use_sim_time" value="false" />
+
+    <!-- 启动arbotix driver-->
+    <arg name="sim" default="true" />
+
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find le_arm)/urdf/le_arm.xacro"/>
+
+    <node name="arbotix" pkg="arbotix_python" type="arbotix_driver" output="screen">
+        <rosparam file="$(find le_arm)/config/arm.yaml" command="load" />
+        <param name="sim" value="true"/>
+    </node>
+
+  
+    <node name="gripper_controller" pkg="arbotix_controllers" type="gripper_controller">
+        <rosparam>
+            model: parallel
+            joint: left_knuckle_joint
+        </rosparam>
+    </node>
+
+    <node
+      name="rob_st_pub"
+      pkg="robot_state_publisher"
+      type="robot_state_publisher" />
+
+
+    <include file="$(find le_arm_moveit_config)/launch/move_group.launch" />
+
+    <node
+      name="rviz"
+      pkg="rviz"
+      type="rviz"
+      args="-d $(find le_arm)/urdf.rviz" required="true" />
+</launch>
+
+
+ 
+
+   

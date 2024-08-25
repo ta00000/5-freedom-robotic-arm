@@ -1,0 +1,12 @@
+{
+	"is_arrive":1,
+	"car_x":0,
+	"car_y":0,
+	"car_theta":0,
+    "goal_x":-0.25,
+	"goal_y":0,
+	"goal_z":0.20,
+	"goal_roll":0,
+	"goal_pitch":0,
+    "goal_yaw":0
+} 

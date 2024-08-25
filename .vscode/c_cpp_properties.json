@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "${default}",
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "includePath": [
+                "/home/tbs/tbs_ros/devel/include/**",
+                "/opt/ros/kinetic/include/**",
+                "/home/tbs/tbs_ros/src/learning_parameter/include/**",
+                "/home/tbs/tbs_ros/src/learning_service/include/**",
+                "/home/tbs/tbs_ros/src/learning_tf/include/**",
+                "/home/tbs/tbs_ros/src/learning_topic/include/**",
+                "/home/tbs/catkin_ws/src/mypackage/my_serial_node/include/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "c++14",
+            "configurationProvider": "ms-vscode.makefile-tools"
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,1 @@
+rosrun moveit_kinematics create_ikfast_moveit_plugin.py le_arm arm le_arm_ikfast_arm_plugin /home/tbs/le_arm/src/le_arm_ikfast_arm_plugin/src/le_arm_arm_ikfast_solver.cpp
